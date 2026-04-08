@@ -21,9 +21,11 @@ cpu_kernel=$(echo "$vmstat_mb"|tail -1| awk '{print $14}'| xargs)
 disk_io=$(echo "$vmstat_mb"| tail -1 | awk '{print $9+$10}')
 disk_available=$(df -BM /|tail -1| awk '{print $4}'| sed 's/M//')
 
-host_id="(SELECT id FROM host_info WHERE hostname='$hostname')";
+host_id="(SELECT id FROM host_info WHERE hostname='$hostname')"
 
-insert_stmt="INSERT INTO host_usage(timestamp, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available) VALUES('$timestamp', '$memory_free', '$cpu_idle', '$cpu_kernel', '$disk_io', '$disk_available');"
+insert_stmt="INSERT INTO host_usage(timestamp, host_id, memory_free, cpu_idle, cpu_kernel, disk_io, disk_available) VALUES('$timestamp', $host_id,$memory_free, $cpu_idle, $cpu_kernel, $disk_io, $disk_available);"
+
+
 
 export PGPASSWORD=$psql_password
 psql -h $psql_host -p $psql_port -d $db_name -U $psql_user -c "$insert_stmt"
