@@ -36,6 +36,8 @@ The architecture follows a distributed monitoring model:
 - A centralized PostgreSQL database, running inside a Docker container, stores all collected data.
 - A scheduler (Crontab) automates periodic executions of the ```host_usage.sh``` script.
 - Communication between the hosts and the database are handled using CLI and network connections.
+
+![Monitoring Agent Diagram](linux_sql/assets/MonitoringAgent.jpeg)
 ## Scripts
 Below are all the scripts implemented in this project and the commands to execute them.
 - ### psql_docker.sh
