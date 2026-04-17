@@ -1,9 +1,8 @@
 # Introduction
+In this project, I created a database called ```exercises```. Then, I created a scheme called ```cd```. This scheme has 3 tables: ```cd members```, ```cd.bookings```, and ```cd.facilities```. Then I exercised different sql queries to select, insert, delete, or update data fields, covering all CRUD operations.
 
 # SQL Queries
-
-##### Table Setup (DDL)
-
+I practiced different SQL queries falling under the following categories: Modifying Data, Basics, Join, Aggregation, and String.
 
 ### Modifying Data
 
