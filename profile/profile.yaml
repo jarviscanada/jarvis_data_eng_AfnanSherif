@@ -1,0 +1,111 @@
+# Preferred name (Characters only)
+name: "Afnan Sherif"
+# Your GitHub repo root URL
+github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_demo
+
+# Introduce yourself, your academic and professional background.
+# What excites you about the software industry and your passion. At least 80 words
+summary: "A passionate Software Developer with 4+ years of experience specializing in C#, Python, RESTful APIs, and database development. Using my skillset in strategic thinking, fast learning, and effective across-team communication, I design and maintain scalable, secure applications while ensuring reliability through proactive troubleshooting. Eager to learn and grow, I am now expanding my career into Cybersecurity, bridging my backend expertise with security innovation to build resilient systems that anticipate and neutralize threats before they impact businesses."
+
+
+# Group your skills by level.
+# Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
+skills:
+  # At least 5 skills
+  proficient:
+    - C#/.NET
+    - Linux/Bash
+    - RDBMS/SQL
+    - Agile/Scrum
+    - Git
+    - Python
+  # At least 5 skills
+  competent:
+    - HTML/CSS
+    - Docker
+    - Trello
+    - REST API
+    - AWS/GCP
+  # At least 5 skills
+  familiar:
+    - Django
+    - Flask
+    - Jenkins
+    - Java
+    - Azure DevOps
+
+# List of Jarvis projects
+jarvis_projects:
+  - name: "Linux Cluster Monitoring Agent"
+    git_url: "/linux_sql"
+    # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: " This project implements an automated Linux monitoring system using Bash scripting to collect and store host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs on each host and executes system commands at regular intervals (every minute) to capture real-time performance data. The collected information is then stored in a centralized PostgreSQL database named host_agent, along with log files for tracking and troubleshooting. The system is built using a combination of technologies including Bash for scripting, PostgreSQL for data storage, Docker for containerization, and Crontab for scheduling. Additional tools such as Git, GitHub, and Gitflow are used for version control, while SSH and CLI utilities were used for remote access and system interaction."
+
+# List of personal or academic projects
+# Feel free to add more projects
+#highlighted_projects:
+    #project name
+  - name: "Detecting Malware Email Using Machine Learning"
+    #URL is optional
+    #git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails. The project involved collecting and preparing datasets, training and evaluating models using metrics such as accuracy, precision, recall, and F1-score, and improving the system to reduce false positives. The next phase of the project is about integrating the solution into a practical interface through a browser extension and API, allowing real-time scanning of emails. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem."
+
+#List of professional experience
+#The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
+#The description must be more than 25 words. If your experience is not software related, please focus on soft skills and achievements (e.g. team collaboration, problem-solving, improvements, communication).
+professional_experience:
+  #Write your Jarvis role as a professional experience rather than training.
+  - title: "Software Developer"
+    company: "Jarvis"
+    duration: "03/2026-present"
+    # The project description must start with an action verb (https://bit.ly/3guO98u)
+    description: "I am developing my technical and professional skills through hands-on training, real-world projects, and collaboration in a fast-paced consulting environment. I am strengthening my knowledge in areas such as software development, databases, cloud technologies, and problem-solving while working on practical assignments that reflect client needs and industry standards."
+
+  - title: "Software Engineer (Part-time)"
+    company: "Sentinel360"
+    duration: "08/2024-02/2026"
+    description: "Developed and maintained AI-driven phishing detection systems in a production environment, analyzing hundreds of websites daily to identify threats while enhancing Flask/Django applications through performance tuning, database optimization, and scalable backend improvements."
+  - title: "Full Stack Developer"
+    company: "NBS Venture"
+    duration: "12/2022-01/2024"
+    description: "Developed full-stack web applications using HTML, CSS, and C#, improved internal business tools to meet functional requirements, and automated testing and deployment workflows to increase efficiency and reliability."
+  - title: "Junior Software Developer"
+    company: "Arib"
+    duration: "01/2021-11/2022"
+    descriiption: "Assisted in building and maintaining backend platform services within an Agile environment, created automated Python testing scripts to reduce bugs, and improved data accuracy through scripting and process optimization."
+  - title: "Backend Developer (Part-time)"
+    company: "Kolay Pro"
+    duration: "01/2020-12/2020"
+    description: "Developed RESTful APIs using Python and Flask, optimized PostgreSQL queries to improve response times, and collaborated with cross-functional teams to deliver reliable backend solutions."
+
+#List of edcuation
+education: 
+  - school_name: "Seneca Polytechnic College"
+    duration: "2025-2026"
+    degree: "Cybersecurity and Threat Management Certification"
+    department: "Computer Science"
+    # optional
+    awards_achievements: 
+      - "GPA: 3.7/4.0"
+  - school_name: "Istanbul Kultur University"
+    duration: "2019-2022"
+    degree: "Computer Engineering"
+    department: "Electrical and Computer Engineering"
+    awards_achievements: 
+     - "Certificate of Participation - HORA 2022 (supported by IEEE). Presented and published paper Detecting Phishing Websites using Machine Learning: https://ieeexplore.ieee.org/abstract/document/9799917"
+     - "GPA: 3.3/4.0"
+
+#Optional section
+others:
+    #category
+  - title: "Certificates"
+    #list of items
+    bullets:
+      - "Microsoft Azure AI Fundamentals (2025)"
+  - title: "Activities/Hobbies"
+    bullets:
+      - "Photographer"
+      - "Travelling"
+      - "Discovering/learning new skills"
