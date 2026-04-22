@@ -1,0 +1,112 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "GPA: 3.7/4.0"
+      ],
+      "degree": "Cybersecurity and Threat Management Certification",
+      "department": "Computer Science",
+      "duration": "2025-2026",
+      "school_name": "Seneca Polytechnic College"
+    },
+    {
+      "awards_achievements": [
+        "Certificate of Participation - HORA 2022 (supported by IEEE). Presented and published paper Detecting Phishing Websites using Machine Learning: https://ieeexplore.ieee.org/abstract/document/9799917",
+        "GPA: 3.3/4.0"
+      ],
+      "degree": "Computer Engineering",
+      "department": "Electrical and Computer Engineering",
+      "duration": "2019-2022",
+      "school_name": "Istanbul Kultur University"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_demo",
+  "highlighted_projects": [
+    {
+      "description": "The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails. The project involved collecting and preparing datasets, training and evaluating models using metrics such as accuracy, precision, recall, and F1-score, and improving the system to reduce false positives. The next phase of the project is about integrating the solution into a practical interface through a browser extension and API, allowing real-time scanning of emails. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem.",
+      "git_url": "https://github.com/jarviscanada/jarvis_profile_builder",
+      "name": "Detecting Malware Email Using Machine Learning"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": " This project implements an automated Linux monitoring system using Bash scripting to collect and store host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs on each host and executes system commands at regular intervals (every minute) to capture real-time performance data. The collected information is then stored in a centralized PostgreSQL database named host_agent, along with log files for tracking and troubleshooting. The system is built using a combination of technologies including Bash for scripting, PostgreSQL for data storage, Docker for containerization, and Crontab for scheduling. Additional tools such as Git, GitHub, and Gitflow are used for version control, while SSH and CLI utilities were used for remote access and system interaction.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/feature/profile/linux_sql",
+      "name": "Linux Cluster Monitoring Agent"
+    }
+  ],
+  "name": "Afnan Sherif",
+  "others": [
+    {
+      "bullets": [
+        "Microsoft Azure AI Fundamentals (2025)"
+      ],
+      "title": "Certificates"
+    },
+    {
+      "bullets": [
+        "Photographer",
+        "Travelling",
+        "Discovering/learning new skills"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "I am developing my technical and professional skills through hands-on training, real-world projects, and collaboration in a fast-paced consulting environment. I am strengthening my knowledge in areas such as software development, databases, cloud technologies, and problem-solving while working on practical assignments that reflect client needs and industry standards.",
+      "duration": "03/2026-present",
+      "title": "Software Developer"
+    },
+    {
+      "company": "Sentinel360",
+      "description": "Developed and maintained AI-driven phishing detection systems in a production environment, analyzing hundreds of websites daily to identify threats while enhancing Flask/Django applications through performance tuning, database optimization, and scalable backend improvements.",
+      "duration": "08/2024-02/2026",
+      "title": "Software Engineer (Part-time)"
+    },
+    {
+      "company": "NBS Venture",
+      "description": "Developed full-stack web applications using HTML, CSS, and C#, improved internal business tools to meet functional requirements, and automated testing and deployment workflows to increase efficiency and reliability.",
+      "duration": "12/2022-01/2024",
+      "title": "Full Stack Developer"
+    },
+    {
+      "company": "Arib",
+      "description": "Assisted in building and maintaining backend platform services within an Agile environment, created automated Python testing scripts to reduce bugs, and improved data accuracy through scripting and process optimization.",
+      "duration": "01/2021-11/2022",
+      "title": "Junior Software Developer"
+    },
+    {
+      "company": "Kolay Pro",
+      "description": "Developed RESTful APIs using Python and Flask, optimized PostgreSQL queries to improve response times, and collaborated with cross-functional teams to deliver reliable backend solutions.",
+      "duration": "01/2020-12/2020",
+      "title": "Backend Developer (Part-time)"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "HTML/CSS",
+      "Docker",
+      "Trello",
+      "REST API",
+      "AWS/GCP"
+    ],
+    "familiar": [
+      "Django",
+      "Flask",
+      "Jenkins",
+      "Java",
+      "Azure DevOps"
+    ],
+    "proficient": [
+      "C#/.NET",
+      "Linux/Bash",
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git",
+      "Python"
+    ]
+  },
+  "summary": "A passionate Software Developer with 4+ years of experience specializing in C#, Python, RESTful APIs, and database development. Using my skillset in strategic thinking, fast learning, and effective across-team communication, I design and maintain scalable, secure applications while ensuring reliability through proactive troubleshooting. Eager to learn and grow, I am now expanding my career into Cybersecurity, bridging my backend expertise with security innovation to build resilient systems that anticipate and neutralize threats before they impact businesses."
+}
