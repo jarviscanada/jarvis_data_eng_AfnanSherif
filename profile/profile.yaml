@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_demo
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: A passionate Software Developer with 4+ years of experience specializing in C#, Python, RESTful APIs, and database development. Using my skillset in strategic thinking, fast learning, and effective across-team communication, I design and maintain scalable, secure applications while ensuring reliability through proactive troubleshooting. Eager to learn and grow, I am now expanding my career into Cybersecurity, bridging my backend expertise with security innovation to build resilient systems that anticipate and neutralize threats before they impact businesses.
+summary: A passionate Software Developer with 4+ years of experience specializing in backend development. By applying strategic thinking to solve complex challenges and improve processes, I design and maintain reliable applications while enhancing performance through proactive troubleshooting and efficient system design. With hands-on experience in credit card sales, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go.
 
 
 # Group your skills by level.
@@ -14,25 +14,26 @@ skills:
   # At least 5 skills
   proficient:
     - C#/.NET
-    - Linux/Bash
-    - RDBMS/SQL
-    - Agile/Scrum
-    - Git
     - Python
+    - Agile/Scrum
+    - AI/ML
+    - REST API
+    - Git/GitHub
   # At least 5 skills
   competent:
     - HTML/CSS
     - Docker
     - Trello
-    - REST API
     - AWS/GCP
+    - SQL/RDBMS
+    - Linux/Bash
   # At least 5 skills
   familiar:
+    - Java
     - Django
     - Flask
-    - Jenkins
-    - Java
-    - Azure DevOps
+    - Database Management
+    - CI/CD
 
 # List of Jarvis projects
 jarvis_projects:
@@ -40,7 +41,7 @@ jarvis_projects:
     git_url: "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/feature/profile/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: " This project implements an automated Linux monitoring system using Bash scripting to collect and store host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs on each host and executes system commands at regular intervals (every minute) to capture real-time performance data. The collected information is then stored in a centralized PostgreSQL database named host_agent, along with log files for tracking and troubleshooting. The system is built using a combination of technologies including Bash for scripting, PostgreSQL for data storage, Docker for containerization, and Crontab for scheduling. Additional tools such as Git, GitHub, and Gitflow are used for version control, while SSH and CLI utilities were used for remote access and system interaction."
+    description: "This project implements an automated Linux monitoring solution using Bash scripting to collect host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs on each host at regular one-minute intervals to capture real-time performance data and store it in a centralized PostgreSQL database, along with logs for troubleshooting and tracking. The project uses Bash for automation, PostgreSQL for storage, Docker for containerization, and Crontab for scheduling."
 
 # List of personal or academic projects
 # Feel free to add more projects
@@ -50,7 +51,7 @@ highlighted_projects:
     #URL is optional
     git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails. The project involved collecting and preparing datasets, training and evaluating models using metrics such as accuracy, precision, recall, and F1-score, and improving the system to reduce false positives. The next phase of the project is about integrating the solution into a practical interface through a browser extension and API, allowing real-time scanning of emails. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem."
+    description: "The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails. It involved collecting and preparing datasets, training and evaluating machine learning models using metrics such as accuracy, precision, recall, and F1-score, and continuously improving the models to reduce false positives. I also developed a Python-based web application, REST API, and browser extension to enable real-time email scanning and threat detection directly within the user interface. The project used technologies and libraries such as Python, Flask, scikit-learn, pandas, joblib, HTML, CSS, and JavaScript. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -61,12 +62,17 @@ professional_experience:
     company: "Jarvis"
     duration: "03/2026-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "I am developing my technical and professional skills through hands-on training, real-world projects, and collaboration in a fast-paced consulting environment. I am strengthening my knowledge in areas such as software development, databases, cloud technologies, and problem-solving while working on practical assignments that reflect client needs and industry standards."
+    description: "Apply my technical and professional skills through hands-on training, real-world projects, and collaboration in a fast-paced consulting environment. Use technologies such as PostgreSQL, Linux, CLI tools, and Docker while building software solutions, managing databases, solving problems, and completing practical assignments that reflect client needs and industry standards."
+
+  - title: "Sales Representative"
+    company: "Kognitive Sales Solutions"
+    duration: "04/2025-03/2026"
+    description: "Promoted credit card products in high-traffic retail environments by engaging customers, explaining product benefits, and building strong client relationships. Consistently used communication, persuasion, and problem-solving skills to meet sales targets, handle objections, and deliver a positive customer experience in a fast-paced setting."
 
   - title: "Software Engineer (Part-time)"
     company: "Sentinel360"
     duration: "08/2024-02/2026"
-    description: "Developed and maintained AI-driven phishing detection systems in a production environment, analyzing hundreds of websites daily to identify threats while enhancing Flask/Django applications through performance tuning, database optimization, and scalable backend improvements."
+    description: "Developed and maintained AI-driven phishing detection systems in a production environment that scanned hundreds of websites daily for suspicious behavior, malicious patterns, and phishing indicators. Improved application performance by optimizing database queries, refining caching logic, troubleshooting backend issues, and enhancing existing Flask/Django features for better scalability and reliability."
 
   - title: "Full Stack Developer"
     company: "NBS Venture"
@@ -76,7 +82,7 @@ professional_experience:
   - title: "Junior Software Developer"
     company: "Arib"
     duration: "01/2021-11/2022"
-    description: "Assisted in building and maintaining backend platform services within an Agile environment, created automated Python testing scripts to reduce bugs, and improved data accuracy through scripting and process optimization."
+    description: "Assisted in developing and maintaining backend platform services within an Agile environment by supporting feature releases, troubleshooting application issues, and improving system functionality. Created automated Python testing scripts to identify defects earlier in development, reduce recurring bugs, and used data-processing scripts to clean datasets and improve data accuracy"
 
   - title: "Backend Developer (Part-time)"
     company: "Kolay Pro"
@@ -97,7 +103,6 @@ education:
     degree: "Computer Engineering"
     department: "Electrical and Computer Engineering"
     awards_achievements: 
-     - "Certificate of Participation - HORA 2022 (supported by IEEE). Presented and published paper Detecting Phishing Websites using Machine Learning: https://ieeexplore.ieee.org/abstract/document/9799917"
      - "GPA: 3.3/4.0"
 
 #Optional section
@@ -109,6 +114,10 @@ others:
       - "Microsoft Azure AI Fundamentals (2025)"
   - title: "Activities/Hobbies"
     bullets:
-      - "Photographer"
-      - "Travelling"
-      - "Discovering/learning new skills"
+      - "Photography is a form of art that I use to capture meaningful moments and savor them forever."
+      - "I love travelling because I get to explore new places, meet new people, experience different cultures, and enjoy beautiful scenery."
+      - "I like to learn a new skill every 3-6 months."
+      - "Some of my hobbies are crocheting, gardening, cooking Italian cusine, and DIY crafts."
+      - "I am allergic to cats, but I love them, especially my cat Nemo."
+      - "Certificate of Participation - Human-Computer Interaction, Optimization, and Robotic Applications (HORA) 2022 (supported by IEEE). Presented and published paper Detecting Phishing Websites using Machine Learning: https://ieeexplore.ieee.org/abstract/document/9799917"
+
