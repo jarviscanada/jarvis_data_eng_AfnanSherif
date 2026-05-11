@@ -1,6 +1,6 @@
 # Afnan Sherif . Jarvis Consulting
 
-A passionate Software Developer with 4+ years of experience specializing in backend development. By applying strategic thinking to solve complex challenges and improve processes, I design and maintain reliable applications while enhancing performance through proactive troubleshooting and efficient system design. With hands-on experience in credit card sales, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go.
+A passionate Software Developer with 4+ years of experience specializing in backend development. By applying strategic thinking to challenges such as reducing API response times, optimizing database queries, improving application scalability, and streamlining development workflows, I design and maintain reliable backend applications while enhancing overall system performance and efficiency. Also, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments from working in credit card sales. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go.
 
 ## Skills
 
@@ -15,11 +15,11 @@ A passionate Software Developer with 4+ years of experience specializing in back
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](https://github.com/jarviscanada/jarvis_data_eng_demo)
 
 
-**Linux Cluster Monitoring Agent** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/feature/profile/linux_sql)]: This project implements an automated Linux monitoring solution using Bash scripting to collect host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs on each host at regular one-minute intervals to capture real-time performance data and store it in a centralized PostgreSQL database, along with logs for troubleshooting and tracking. The project uses Bash for automation, PostgreSQL for storage, Docker for containerization, and Crontab for scheduling.
+**Linux Cluster Monitoring Agent** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_demo/tree/masterhttps://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/feature/profile/linux_sql)]: This project implements an automated Linux monitoring solution using Bash scripting to collect host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs using Crontab on each host at regular intervals to capture real-time performance data and store it in a centralized PostgreSQL database running inside a Docker container, along with logs for troubleshooting and tracking.
 
 
 ## Highlighted Projects
-**Detecting Malware Email Using Machine Learning** [[GitHub](https://github.com/jarviscanada/jarvis_profile_builder)]: The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails. It involved collecting and preparing datasets, training and evaluating machine learning models using metrics such as accuracy, precision, recall, and F1-score, and continuously improving the models to reduce false positives. I also developed a Python-based web application, REST API, and browser extension to enable real-time email scanning and threat detection directly within the user interface. The project used technologies and libraries such as Python, Flask, scikit-learn, pandas, joblib, HTML, CSS, and JavaScript. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem.
+**Detecting Malware Email Using Machine Learning** [[GitHub](https://github.com/jarviscanada/jarvis_profile_builder)]: The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails by integrating scikit-learn machine learning models. It involved collecting and preparing datasets, training and evaluating machine learning models using metrics such as accuracy, precision, recall, and F1-score, and continuously improving the models to reduce false positives. I also developed a Python-based web application, REST API, and browser extension to enable real-time email scanning and threat detection directly within the user interface. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem.
 
 
 ## Professional Experiences
@@ -30,11 +30,11 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](http
 
 **Software Engineer (Part-time), Sentinel360 (08/2024-02/2026)**: Developed and maintained AI-driven phishing detection systems in a production environment that scanned hundreds of websites daily for suspicious behavior, malicious patterns, and phishing indicators. Improved application performance by optimizing database queries, refining caching logic, troubleshooting backend issues, and enhancing existing Flask/Django features for better scalability and reliability.
 
-**Full Stack Developer, NBS Venture (12/2022-01/2024)**: Developed full-stack web applications using HTML, CSS, and C#, improved internal business tools to meet functional requirements, and automated testing and deployment workflows to increase efficiency and reliability.
+**Full Stack Developer, NBS Venture (12/2022-01/2024)**: Developed full-stack web applications for the restaurant sector using HTML, CSS, and C#, improved internal restaurant management tools to meet operational requirements, and automated testing and deployment workflows to increase efficiency and reliability.
 
-**Junior Software Developer, Arib (01/2021-11/2022)**: Assisted in developing and maintaining backend platform services within an Agile environment by supporting feature releases, troubleshooting application issues, and improving system functionality. Created automated Python testing scripts to identify defects earlier in development, reduce recurring bugs, and used data-processing scripts to clean datasets and improve data accuracy
+**Junior Software Developer, Arib (01/2021-11/2022)**: Assisted in developing and maintaining backend platform services for business management applications within an Agile environment by supporting feature releases, troubleshooting application issues, and improving system functionality. Created automated Python testing scripts to identify defects earlier in development, reduce recurring bugs, and developed data-processing scripts to clean datasets and improve data accuracy.
 
-**Backend Developer (Part-time), Kolay Pro (01/2020-12/2020)**: Developed RESTful APIs using Python and Flask, optimized PostgreSQL queries to improve response times, and collaborated with cross-functional teams to deliver reliable backend solutions.
+**Backend Developer (Part-time), Kolay Pro (01/2020-12/2020)**: Developed RESTful APIs and backend solutions for digital business applications using Python and Flask, optimized PostgreSQL queries to improve response times, and collaborated with cross-functional teams to deliver efficient backend services.
 
 
 ## Education
@@ -47,9 +47,9 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_demo](http
 
 ## Miscellaneous
 - Microsoft Azure AI Fundamentals (2025)
-- Photography is a form of art that I use to capture meaningful moments and savor them forever.
+- Certificate of Participation - Human-Computer Interaction, Optimization, and Robotic Applications (HORA) 2022 (supported by IEEE). Presented and published paper Detecting Phishing Websites using Machine Learning: https://ieeexplore.ieee.org/abstract/document/9799917
+- I use photography to capture meaningful moments and savor them forever.
 - I love travelling because I get to explore new places, meet new people, experience different cultures, and enjoy beautiful scenery.
 - I like to learn a new skill every 3-6 months.
 - Some of my hobbies are crocheting, gardening, cooking Italian cusine, and DIY crafts.
 - I am allergic to cats, but I love them, especially my cat Nemo.
-- Certificate of Participation - Human-Computer Interaction, Optimization, and Robotic Applications (HORA) 2022 (supported by IEEE). Presented and published paper Detecting Phishing Websites using Machine Learning: https://ieeexplore.ieee.org/abstract/document/9799917
