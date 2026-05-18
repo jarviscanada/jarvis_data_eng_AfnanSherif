@@ -124,4 +124,5 @@ public class JavaGrepImp implements JavaGrep{
   public void setOutFile(String outFile) {
     this.outFile = outFile;
   }
+
 }
