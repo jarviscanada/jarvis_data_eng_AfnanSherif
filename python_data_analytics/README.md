@@ -10,14 +10,13 @@ This project was implemented using Python in a Jupyter Notebook environment. Pan
 ## Project Architecture
 
 The project begins by loading retail transaction data from PostgreSQL or CSV files into Pandas DataFrames. The data is then cleaned, validated, and transformed before performing analytical calculations and generating visualizations. The resulting insights are used by business stakeholders and marketing teams to support decision-making.
-![Architecture Diagram](DataAnalticsDiagram.png)
+
+![Architecture Diagram](./DataAnalyticsDiagram.png)
 ## Data Analytics and Wrangling
 
-Jupyter Notebook:
+### Jupyter Notebook
 
-```text
-./retail_data_analytics_wrangling.ipynb
-```
+[Retail Data Analytics & Wrangling Notebook](./python_data_wrangling/retail_data_analytics_wrangling.ipynb)
 
 The retail transaction data was loaded from both PostgreSQL and CSV sources into Pandas DataFrames for analysis. Data wrangling tasks included data type conversion, column standardization, missing value inspection, and validation of transactional records before performing analytics.
 
