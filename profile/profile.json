@@ -37,6 +37,11 @@
       "description": "This project is a Java application that mimics the Linux grep command by recursively searching files and extracting lines that match a given regular expression. Two implementations were developed: JavaGrepImp using core Java and JavaGrepLambdaImp using Java Streams and lambda expressions. The project utilizes core Java concepts such as OOP, collections, file I/O, exception handling, recursion, and regular expressions. Additional tools and technologies used include Maven for dependency management, SLF4J/Log4j for logging, IntelliJ IDEA as the IDE, Git/GitHub for source control, and Docker for application distribution.",
       "git_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/develop/core_java/grep",
       "name": "Core Java - Grep App"
+    },
+    {
+      "description": "This project focused on analyzing historical retail transaction data for a UK-based e-commerce company to identify customer behavior patterns and support business growth decisions. The goal was to improve customer retention, revenue growth, and marketing strategy through data-driven insights. The project was implemented in Python using a Jupyter Notebook environment. Pandas was used for data cleaning and transformation, NumPy for statistical analysis, and Matplotlib for visualization. The analysis covered sales trends, customer activity, revenue patterns, and customer segmentation to identify high-value customers and purchasing behavior insights.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/develop/python_data_analytics",
+      "name": "Python Data Analytics"
     }
   ],
   "name": "Afnan Sherif",
