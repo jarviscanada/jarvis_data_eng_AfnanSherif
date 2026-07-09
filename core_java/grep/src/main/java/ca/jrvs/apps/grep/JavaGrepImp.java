@@ -9,10 +9,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.stream.Collectors;
-
-import static java.awt.SystemColor.text;
+import java.util.regex.Pattern;
 
 public class JavaGrepImp implements JavaGrep{
   final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
@@ -20,6 +18,7 @@ public class JavaGrepImp implements JavaGrep{
   private String regex;
   private String rootPath;
   private String outFile;
+  private Pattern pattern;
 
   public static void main(String[] args) {
     if (args.length != 3) {
@@ -66,7 +65,8 @@ public class JavaGrepImp implements JavaGrep{
         .map(Path::toFile)
         .collect(Collectors.toList());
     } catch (IOException e) {
-      throw new RuntimeException(e);
+      throw new RuntimeException(
+        "Failed to read files from directory: " + rootDir, e);
     }
   }
 
@@ -79,21 +79,26 @@ public class JavaGrepImp implements JavaGrep{
         lines.add(line);
       }
     } catch (IOException e) {
-      throw new RuntimeException(e);
+        throw new RuntimeException(
+            "Failed to read file: " + inputFile.getName(), e);
     }
     return lines;
   }
 
   @Override
   public boolean containsPattern(String line) {
-    return line.matches(".*" + regex + ".*");  }
-
+    return pattern.matcher(line).find();
+  }
   @Override
   public void writeToFile(List<String> lines) throws IOException {
     try (FileOutputStream output = new FileOutputStream(outFile)) {
       for (String line : lines) {
-        output.write((line + System.lineSeparator()).getBytes());
-      }    }
+        Files.write(
+            Paths.get(outFile),
+            lines
+        );      
+      }    
+    }
   }
   @Override
   public String getRootPath() {
@@ -113,6 +118,7 @@ public class JavaGrepImp implements JavaGrep{
   @Override
   public void setRegex(String regex) {
     this.regex = regex;
+    this.pattern = Pattern.compile(regex);
   }
 
   @Override
