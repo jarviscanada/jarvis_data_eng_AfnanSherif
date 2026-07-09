@@ -19,7 +19,7 @@
       "school_name": "Istanbul Kultur University"
     }
   ],
-  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_demo",
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif",
   "highlighted_projects": [
     {
       "description": "The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails by integrating scikit-learn machine learning models. It involved collecting and preparing datasets, training and evaluating machine learning models using metrics such as accuracy, precision, recall, and F1-score, and continuously improving the models to reduce false positives. I also developed a Python-based web application, REST API, and browser extension to enable real-time email scanning and threat detection directly within the user interface. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem.",
