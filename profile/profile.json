@@ -30,8 +30,13 @@
   "jarvis_projects": [
     {
       "description": "This project implements an automated Linux monitoring solution using Bash scripting to collect host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs using Crontab on each host at regular intervals to capture real-time performance data and store it in a centralized PostgreSQL database running inside a Docker container, along with logs for troubleshooting and tracking.",
-      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/feature/profile/linux_sql",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/develop/linux_sql",
       "name": "Linux Cluster Monitoring Agent"
+    },
+    {
+      "description": "This project is a Java application that mimics the Linux grep command by recursively searching files and extracting lines that match a given regular expression. Two implementations were developed: JavaGrepImp using core Java and JavaGrepLambdaImp using Java Streams and lambda expressions. The project utilizes core Java concepts such as OOP, collections, file I/O, exception handling, recursion, and regular expressions. Additional tools and technologies used include Maven for dependency management, SLF4J/Log4j for logging, IntelliJ IDEA as the IDE, Git/GitHub for source control, and Docker for application distribution.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/develop/core_java/grep",
+      "name": "Core Java - Grep App"
     }
   ],
   "name": "Afnan Sherif",

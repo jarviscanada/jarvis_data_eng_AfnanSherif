@@ -42,7 +42,7 @@ jarvis_projects:
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: "This project implements an automated Linux monitoring solution using Bash scripting to collect host-level metrics such as CPU utilization and memory usage. A lightweight monitoring agent runs using Crontab on each host at regular intervals to capture real-time performance data and store it in a centralized PostgreSQL database running inside a Docker container, along with logs for troubleshooting and tracking."
-    -name: "Core Java - Grep App"
+  - name: "Core Java - Grep App"
     git_url: "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/develop/core_java/grep"
     description: "This project is a Java application that mimics the Linux grep command by recursively searching files and extracting lines that match a given regular expression. Two implementations were developed: JavaGrepImp using core Java and JavaGrepLambdaImp using Java Streams and lambda expressions. The project utilizes core Java concepts such as OOP, collections, file I/O, exception handling, recursion, and regular expressions. Additional tools and technologies used include Maven for dependency management, SLF4J/Log4j for logging, IntelliJ IDEA as the IDE, Git/GitHub for source control, and Docker for application distribution."
 
