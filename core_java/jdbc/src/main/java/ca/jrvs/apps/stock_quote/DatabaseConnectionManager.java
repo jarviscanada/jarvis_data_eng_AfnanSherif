@@ -1,4 +1,4 @@
-package main.java.ca.jrvs.apps.stock_quote;
+package ca.jrvs.apps.stock_quote;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
