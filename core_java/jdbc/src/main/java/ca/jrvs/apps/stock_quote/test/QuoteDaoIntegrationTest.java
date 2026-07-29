@@ -48,6 +48,7 @@ public class QuoteDaoIntegrationTest {
 
         testDeleteAll();
 
+        testNullValidation();
 
         cleanup();
 
@@ -347,6 +348,34 @@ public class QuoteDaoIntegrationTest {
             quoteDao.deleteAll();
 
         }catch(Exception ignored){
+
+        }
+
+    }
+    private static void testNullValidation(){
+
+        try{
+
+            quoteDao.save(null);
+
+            System.out.println("FAILED: save(null)");
+
+        }catch(IllegalArgumentException e){
+
+            System.out.println("PASSED: save(null)");
+
+        }
+
+
+        try{
+
+            quoteDao.findById(null);
+
+            System.out.println("FAILED: findById(null)");
+
+        }catch(IllegalArgumentException e){
+
+            System.out.println("PASSED: findById(null)");
 
         }
 

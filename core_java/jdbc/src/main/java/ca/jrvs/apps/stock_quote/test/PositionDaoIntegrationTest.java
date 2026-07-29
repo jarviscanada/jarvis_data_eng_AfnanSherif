@@ -50,6 +50,8 @@ public class PositionDaoIntegrationTest {
 
         testDeleteAll();
 
+        testNullValidation();
+
 
         cleanup();
 
@@ -348,6 +350,35 @@ public class PositionDaoIntegrationTest {
                     .execute("DELETE FROM quote");
 
         }catch(Exception ignored){
+
+        }
+
+    }
+    private static void testNullValidation(){
+
+        try{
+
+            positionDao.save(null);
+
+            System.out.println("FAILED: save(null)");
+
+        }catch(IllegalArgumentException e){
+
+            System.out.println("PASSED: save(null)");
+
+        }
+
+
+
+        try{
+
+            positionDao.findById(null);
+
+            System.out.println("FAILED: findById(null)");
+
+        }catch(IllegalArgumentException e){
+
+            System.out.println("PASSED: findById(null)");
 
         }
 
