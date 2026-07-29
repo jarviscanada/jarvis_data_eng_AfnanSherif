@@ -4,7 +4,7 @@ import ca.jrvs.apps.stock_quote.helper.QuoteHttpHelper;
 import ca.jrvs.apps.stock_quote.model.Quote;
 import okhttp3.OkHttpClient;
 
-public class QuoteHttpHelperTest {
+public class QuoteHttpHelper_Test {
 
     public static void main(String[] args) {
 

@@ -2,24 +2,25 @@ package ca.jrvs.apps.stock_quote.test;
 
 
 import ca.jrvs.apps.stock_quote.dao.PositionDao;
-import ca.jrvs.apps.stock_quote.dao.QuoteDao;
-import ca.jrvs.apps.stock_quote.model.Quote;
+import ca.jrvs.apps.stock_quote.model.Position;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Optional;
 
 
-public class QuoteDaoIntegrationTest {
+public class PositionDao_Test {
 
 
     private static Connection connection;
-    private static QuoteDao quoteDao;
-
+    private static PositionDao positionDao;
 
 
     public static void main(String[] args) throws SQLException {
 
 
+        // Connect to database
         connection = DriverManager.getConnection(
                 "jdbc:postgresql://localhost:5432/stock_quote",
                 "postgres",
@@ -27,7 +28,7 @@ public class QuoteDaoIntegrationTest {
         );
 
 
-        quoteDao = new QuoteDao(connection);
+        positionDao = new PositionDao(connection);
 
 
         System.out.println("Connected successfully");
@@ -35,6 +36,7 @@ public class QuoteDaoIntegrationTest {
 
         cleanup();
 
+        insertQuote();
 
         testSave();
 
@@ -50,11 +52,11 @@ public class QuoteDaoIntegrationTest {
 
         testNullValidation();
 
+
         cleanup();
 
 
         connection.close();
-
 
         System.out.println("All tests completed");
 
@@ -62,55 +64,71 @@ public class QuoteDaoIntegrationTest {
 
 
 
+    /*
+     * Insert a quote first because position has a foreign key
+     */
+    private static void insertQuote() throws SQLException {
 
 
-    private static Quote createQuote(){
-
-
-        Quote quote = new Quote();
-
-
-        quote.setTicker("MSFT");
-
-
-        quote.setOpen("380.00");
-
-        quote.setHigh("390.00");
-
-        quote.setLow("375.00");
-
-        quote.setPrice("385.00");
-
-
-        quote.setVolume("10000");
-
-
-        quote.setLatestTradingDay(
-                Date.valueOf("2026-07-27")
-        );
-
-
-        quote.setPreviousClose("382.00");
-
-
-        quote.setChange("3.00");
-
-
-        quote.setChangePercent("0.5%");
-
-
-        quote.setTimestamp(
-                new Timestamp(
-                        System.currentTimeMillis()
+        String sql =
+                """
+                INSERT INTO quote
+                (
+                    symbol,
+                    open,
+                    high,
+                    low,
+                    price,
+                    volume,
+                    latest_trading_day,
+                    previous_close,
+                    change,
+                    change_percent,
+                    timestamp
                 )
-        );
+                VALUES
+                (
+                    'MSFT',
+                    380,
+                    390,
+                    375,
+                    385,
+                    10000,
+                    '2026-07-27',
+                    382,
+                    3,
+                    '0.5%',
+                    CURRENT_TIMESTAMP
+                )
+                ON CONFLICT(symbol) DO NOTHING
+                """;
 
 
-        return quote;
+        connection
+                .createStatement()
+                .execute(sql);
 
     }
 
 
+
+
+    private static Position createPosition(){
+
+
+        Position position = new Position();
+
+
+        position.setTicker("MSFT");
+
+        position.setNumOfShares(10);
+
+        position.setValuePaid(3000);
+
+
+        return position;
+
+    }
 
 
 
@@ -118,21 +136,18 @@ public class QuoteDaoIntegrationTest {
     private static void testSave(){
 
 
-        Quote quote = createQuote();
+        Position position = createPosition();
 
 
-        Quote saved = quoteDao.save(quote);
-
+        Position saved =
+                positionDao.save(position);
 
 
         if(saved.getTicker().equals("MSFT")){
 
-
             System.out.println("PASSED: save()");
 
-
         }else{
-
 
             System.out.println("FAILED: save()");
 
@@ -144,12 +159,11 @@ public class QuoteDaoIntegrationTest {
 
 
 
-
     private static void testFindById(){
 
 
-        Optional<Quote> result =
-                quoteDao.findById("MSFT");
+        Optional<Position> result =
+                positionDao.findById("MSFT");
 
 
 
@@ -167,9 +181,8 @@ public class QuoteDaoIntegrationTest {
 
         }
 
+
     }
-
-
 
 
 
@@ -178,23 +191,18 @@ public class QuoteDaoIntegrationTest {
     private static void testFindAll(){
 
 
-        Iterable<Quote> quotes =
-                quoteDao.findAll();
-
+        Iterable<Position> positions =
+                positionDao.findAll();
 
 
         boolean found = false;
 
 
+        for(Position p : positions){
 
-        for(Quote q : quotes){
-
-
-            if(q.getTicker().equals("MSFT")){
-
+            if(p.getTicker().equals("MSFT")){
 
                 found = true;
-
 
             }
 
@@ -204,12 +212,9 @@ public class QuoteDaoIntegrationTest {
 
         if(found){
 
-
             System.out.println("PASSED: findAll()");
 
-
         }else{
-
 
             System.out.println("FAILED: findAll()");
 
@@ -221,28 +226,31 @@ public class QuoteDaoIntegrationTest {
 
 
 
-
-
     private static void testUpdate(){
 
 
-        Quote quote = createQuote();
+        Position position = new Position();
 
 
-        quote.setPrice("400.00");
+        position.setTicker("MSFT");
+
+        position.setNumOfShares(50);
+
+        position.setValuePaid(15000);
 
 
-        quoteDao.save(quote);
+
+        positionDao.save(position);
 
 
 
-        Optional<Quote> result =
-                quoteDao.findById("MSFT");
+        Optional<Position> result =
+                positionDao.findById("MSFT");
 
 
 
         if(result.isPresent()
-                && Double.parseDouble(result.get().getPrice()) == 400.0){
+                && result.get().getNumOfShares() == 50){
 
 
             System.out.println("PASSED: update/upsert");
@@ -253,12 +261,10 @@ public class QuoteDaoIntegrationTest {
 
             System.out.println("FAILED: update/upsert");
 
-
         }
 
+
     }
-
-
 
 
 
@@ -267,12 +273,12 @@ public class QuoteDaoIntegrationTest {
     private static void testDeleteById(){
 
 
-        quoteDao.deleteById("MSFT");
+        positionDao.deleteById("MSFT");
 
 
 
-        Optional<Quote> result =
-                quoteDao.findById("MSFT");
+        Optional<Position> result =
+                positionDao.findById("MSFT");
 
 
 
@@ -287,12 +293,10 @@ public class QuoteDaoIntegrationTest {
 
             System.out.println("FAILED: deleteById()");
 
-
         }
 
+
     }
-
-
 
 
 
@@ -301,19 +305,22 @@ public class QuoteDaoIntegrationTest {
     private static void testDeleteAll(){
 
 
-        quoteDao.save(createQuote());
+        Position position = createPosition();
 
 
-        quoteDao.deleteAll();
+        positionDao.save(position);
 
 
-
-        Iterable<Quote> quotes =
-                quoteDao.findAll();
+        positionDao.deleteAll();
 
 
 
-        if(!quotes.iterator().hasNext()){
+        Iterable<Position> positions =
+                positionDao.findAll();
+
+
+
+        if(!positions.iterator().hasNext()){
 
 
             System.out.println("PASSED: deleteAll()");
@@ -324,11 +331,10 @@ public class QuoteDaoIntegrationTest {
 
             System.out.println("FAILED: deleteAll()");
 
-
         }
 
-    }
 
+    }
 
 
 
@@ -338,14 +344,10 @@ public class QuoteDaoIntegrationTest {
 
         try {
 
-            PositionDao positionDao =
-                    new PositionDao(connection);
-
-            // Delete child table first because of FK constraint
             positionDao.deleteAll();
 
-            // Delete parent table after
-            quoteDao.deleteAll();
+            connection.createStatement()
+                    .execute("DELETE FROM quote");
 
         }catch(Exception ignored){
 
@@ -356,7 +358,7 @@ public class QuoteDaoIntegrationTest {
 
         try{
 
-            quoteDao.save(null);
+            positionDao.save(null);
 
             System.out.println("FAILED: save(null)");
 
@@ -367,9 +369,10 @@ public class QuoteDaoIntegrationTest {
         }
 
 
+
         try{
 
-            quoteDao.findById(null);
+            positionDao.findById(null);
 
             System.out.println("FAILED: findById(null)");
 
