@@ -24,11 +24,11 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
     private static final String UPSERT =
-            "INSERT INTO position(symbol, number_of_shares, value_paid) "
-                    + "VALUES (?, ?, ?) "
-                    + "ON CONFLICT(symbol) DO UPDATE SET "
-                    + "number_of_shares = EXCLUDED.number_of_shares, "
-                    + "value_paid = EXCLUDED.value_paid";
+            "INSERT INTO position(symbol, number_of_shares, value_paid) " +
+                    "VALUES (?, ?, ?) " +
+                    "ON CONFLICT(symbol) DO UPDATE SET " +
+                    "number_of_shares = EXCLUDED.number_of_shares, " +
+                    "value_paid = EXCLUDED.value_paid";
 
 
     private static final String FIND_BY_ID =
@@ -57,7 +57,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
     /**
-     * Saves or updates a position using UPSERT.
+     * Inserts or updates a position.
      */
     @Override
     public Position save(Position entity)
@@ -68,8 +68,9 @@ public class PositionDao implements CrudDao<Position, String> {
                 || entity.getTicker() == null
                 || entity.getTicker().isBlank()) {
 
+
             throw new IllegalArgumentException(
-                    "Position or ticker cannot be null or blank"
+                    "Position or ticker cannot be null/empty"
             );
 
         }
@@ -127,19 +128,19 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
 
-
     /**
-     * Finds a position by ticker symbol.
+     * Finds position by ticker symbol.
      */
     @Override
     public Optional<Position> findById(String id)
             throws IllegalArgumentException {
 
 
-        if(id == null || id.isBlank()){
+        if(id == null || id.isBlank()) {
+
 
             throw new IllegalArgumentException(
-                    "Ticker cannot be null or blank"
+                    "Ticker cannot be null/empty"
             );
 
         }
@@ -161,7 +162,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
 
-            if(rs.next()){
+            if(rs.next()) {
 
 
                 return Optional.of(
@@ -198,9 +199,8 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
 
-
     /**
-     * Retrieves all positions.
+     * Returns all positions.
      */
     @Override
     public Iterable<Position> findAll(){
@@ -220,7 +220,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
 
-            while(rs.next()){
+            while(rs.next()) {
 
 
                 positions.add(
@@ -239,13 +239,13 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
             logger.error(
-                    "Failed to retrieve positions",
+                    "Failed retrieving positions",
                     e
             );
 
 
             throw new RuntimeException(
-                    "Failed finding positions",
+                    "Failed retrieving positions",
                     e
             );
 
@@ -256,19 +256,19 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
 
-
     /**
-     * Deletes a position by ticker symbol.
+     * Deletes position by ticker.
      */
     @Override
     public void deleteById(String id)
             throws IllegalArgumentException {
 
 
-        if(id == null || id.isBlank()){
+        if(id == null || id.isBlank()) {
+
 
             throw new IllegalArgumentException(
-                    "Ticker cannot be null or blank"
+                    "Ticker cannot be null/empty"
             );
 
         }
@@ -285,6 +285,7 @@ public class PositionDao implements CrudDao<Position, String> {
             );
 
 
+            // silently ignores if nothing is deleted
             ps.executeUpdate();
 
 
@@ -293,7 +294,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
             logger.error(
-                    "Failed to delete position {}",
+                    "Failed deleting position {}",
                     id,
                     e
             );
@@ -307,7 +308,6 @@ public class PositionDao implements CrudDao<Position, String> {
         }
 
     }
-
 
 
 
@@ -331,7 +331,7 @@ public class PositionDao implements CrudDao<Position, String> {
 
 
             logger.error(
-                    "Failed to delete all positions",
+                    "Failed deleting all positions",
                     e
             );
 
@@ -344,7 +344,6 @@ public class PositionDao implements CrudDao<Position, String> {
         }
 
     }
-
 
 
 
