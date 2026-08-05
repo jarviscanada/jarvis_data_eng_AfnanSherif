@@ -86,7 +86,7 @@
                 <!-- add Main-Class to manifest file -->
                 <transformer
                   implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                  <mainClass>ca.jrvs.apps.stock_quote.main</mainClass>
+                  <mainClass>ca.jrvs.apps.stock_quote.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>

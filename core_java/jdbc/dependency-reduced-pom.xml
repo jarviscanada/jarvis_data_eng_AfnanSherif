@@ -25,7 +25,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>ca.jrvs.apps.stock_quote.main</mainClass>
+                  <mainClass>ca.jrvs.apps.stock_quote.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>

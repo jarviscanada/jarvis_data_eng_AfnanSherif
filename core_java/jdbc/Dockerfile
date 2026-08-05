@@ -1,3 +1,7 @@
-FROM jcxldn/openjdk-alpine:16-jdk
-COPY target/grep*.jar /usr/local/app/grep/lib/grep.jar
-ENTRYPOINT ["java","-jar","/usr/local/app/grep/lib/grep.jar"]
+FROM eclipse-temurin:17-jdk
+
+WORKDIR /app
+
+COPY target/stock_quote-1.0-SNAPSHOT.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
