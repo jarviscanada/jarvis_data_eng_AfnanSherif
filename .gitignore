@@ -7,3 +7,17 @@ target/
 *.iml
 .idea/
 .eclipse
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.ipython/
+.jupyter/
+.cache/
+.config/
+.local/
+.npm/
+.DS_Store
+.vscode/
+.venv/
+venv/
+env/

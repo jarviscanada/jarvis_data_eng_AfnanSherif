@@ -1,0 +1,806 @@
+2026-07-29 15:54:12,248 INFO  ca.jrvs.apps.stock_quote.Main:94 - Database connected successfully
+2026-08-05 10:21:41,646 INFO  ca.jrvs.apps.stock_quote.Main:26 - Stock Quote application starting
+2026-08-05 10:21:41,651 INFO  ca.jrvs.apps.stock_quote.Main:43 - Application properties loaded successfully
+2026-08-05 10:21:41,914 INFO  ca.jrvs.apps.stock_quote.Main:86 - Database connected successfully
+2026-08-05 10:21:42,224 INFO  ca.jrvs.apps.stock_quote.Main:132 - Application components initialized successfully
+2026-08-05 10:49:41,520 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 10:49:41,558 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 10:49:41,564 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 10:49:41,571 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 10:49:41,592 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 10:49:41,596 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 10:49:41,596 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 10:49:41,599 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 10:49:41,600 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 10:49:41,602 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:149 - Finding quote for ticker: MSFT
+2026-08-05 10:49:41,613 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:165 - Quote found for ticker: MSFT
+2026-08-05 10:49:41,619 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 10:49:41,623 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 10:49:41,649 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 10:49:41,651 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 10:49:41,654 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 10:49:41,655 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 10:49:41,656 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 10:49:41,662 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 10:49:41,663 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 10:49:41,664 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:149 - Finding quote for ticker: MSFT
+2026-08-05 10:49:41,668 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:165 - Quote found for ticker: MSFT
+2026-08-05 10:49:41,670 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 10:49:41,675 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 10:49:41,684 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 10:49:41,687 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 10:49:41,692 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: INVALID
+2026-08-05 10:49:41,694 ERROR ca.jrvs.apps.stock_quote.service.QuoteService:63 - Failed to fetch or save quote for ticker: INVALID
+java.lang.IllegalArgumentException: Invalid ticker
+	at ca.jrvs.apps.stock_quote.helper.QuoteHttpHelper.fetchQuoteInfo(QuoteHttpHelper.java:46)
+	at ca.jrvs.apps.stock_quote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:45)
+	at ca.jrvs.apps.stock_quote.service.QuoteService_IntTest.fetchQuoteDataFromAPI_invalidTicker_returnsEmpty(QuoteService_IntTest.java:222)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-08-05 10:49:41,712 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 10:49:41,713 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 10:49:41,758 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,763 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,774 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 10:49:41,774 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 10:49:41,781 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 10:49:41,781 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 10:49:41,782 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 10:49:41,787 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 10:49:41,788 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 10:49:41,789 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 5, price: 400.0
+2026-08-05 10:49:41,789 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 10:49:41,791 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:148 - Position found for ticker: MSFT
+2026-08-05 10:49:41,792 INFO  ca.jrvs.apps.stock_quote.service.PositionService:81 - Existing position found for ticker: MSFT. Updating position
+2026-08-05 10:49:41,792 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 10:49:41,796 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 10:49:41,797 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 10:49:41,798 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,801 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,810 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,812 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,820 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: AAPL
+2026-08-05 10:49:41,821 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: AAPL
+2026-08-05 10:49:41,823 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: AAPL
+2026-08-05 10:49:41,823 WARN  ca.jrvs.apps.stock_quote.service.PositionService:161 - Sell request failed because no position exists for ticker: AAPL
+2026-08-05 10:49:41,824 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,825 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,833 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,835 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,840 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 10:49:41,841 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 10:49:41,843 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 10:49:41,844 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 10:49:41,844 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 10:49:41,849 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 10:49:41,850 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 10:49:41,850 INFO  ca.jrvs.apps.stock_quote.service.PositionService:128 - Retrieving portfolio
+2026-08-05 10:49:41,851 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:186 - Retrieving all positions
+2026-08-05 10:49:41,852 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:204 - Retrieved 1 positions successfully
+2026-08-05 10:49:41,853 INFO  ca.jrvs.apps.stock_quote.service.PositionService:133 - Portfolio retrieved successfully
+2026-08-05 10:49:41,854 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,858 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,864 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,865 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,870 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 10:49:41,871 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 10:49:41,873 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 10:49:41,873 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 10:49:41,874 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 10:49:41,877 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 10:49:41,878 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 10:49:41,879 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,882 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,889 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,891 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:41,896 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 10:49:41,896 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 10:49:41,898 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 10:49:41,898 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 10:49:41,899 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 10:49:41,902 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 10:49:41,902 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 10:49:41,903 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 10:49:41,903 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 10:49:41,905 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:148 - Position found for ticker: MSFT
+2026-08-05 10:49:41,926 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:243 - Deleting position for ticker: MSFT
+2026-08-05 10:49:41,929 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:258 - Position deleted successfully for ticker: MSFT
+2026-08-05 10:49:41,930 INFO  ca.jrvs.apps.stock_quote.service.PositionService:174 - Sell completed successfully for ticker: MSFT
+2026-08-05 10:49:41,930 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 10:49:41,931 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 10:49:41,932 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 10:49:41,933 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 10:49:42,069 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 10:49:42,070 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 10:49:42,075 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: BAD
+2026-08-05 10:49:42,075 ERROR ca.jrvs.apps.stock_quote.service.QuoteService:63 - Failed to fetch or save quote for ticker: BAD
+java.lang.IllegalArgumentException
+	at ca.jrvs.apps.stock_quote.helper.QuoteHttpHelper.fetchQuoteInfo(QuoteHttpHelper.java:46)
+	at ca.jrvs.apps.stock_quote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:45)
+	at ca.jrvs.apps.stock_quote.service.QuoteService_UnitTest.fetchQuoteDataFromAPI_invalidTicker(QuoteService_UnitTest.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1612)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-08-05 10:49:42,088 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 10:49:42,089 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 10:49:42,090 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 10:49:42,147 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 10:49:42,148 INFO  ca.jrvs.apps.stock_quote.service.PositionService:174 - Sell completed successfully for ticker: MSFT
+2026-08-05 10:49:42,153 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 10:49:42,154 WARN  ca.jrvs.apps.stock_quote.service.PositionService:161 - Sell request failed because no position exists for ticker: MSFT
+2026-08-05 10:49:42,158 WARN  ca.jrvs.apps.stock_quote.service.PositionService:38 - Buy request rejected for ticker MSFT because share count is invalid: 0
+2026-08-05 10:49:42,163 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 5, price: 100.0
+2026-08-05 10:49:42,165 INFO  ca.jrvs.apps.stock_quote.service.PositionService:81 - Existing position found for ticker: MSFT. Updating position
+2026-08-05 10:49:42,166 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 10:49:42,171 INFO  ca.jrvs.apps.stock_quote.service.PositionService:128 - Retrieving portfolio
+2026-08-05 10:49:42,172 INFO  ca.jrvs.apps.stock_quote.service.PositionService:133 - Portfolio retrieved successfully
+2026-08-05 10:49:42,178 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 100.0
+2026-08-05 10:49:42,179 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 10:49:42,179 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:08:41,490 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:08:41,512 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:08:41,520 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 11:08:41,530 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:08:41,549 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:08:41,554 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:08:41,554 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 11:08:41,558 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:08:41,559 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:08:41,562 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:149 - Finding quote for ticker: MSFT
+2026-08-05 11:08:41,571 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:165 - Quote found for ticker: MSFT
+2026-08-05 11:08:41,577 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:08:41,582 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:08:41,599 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:08:41,601 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:08:41,603 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:08:41,604 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:08:41,604 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 11:08:41,608 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:08:41,609 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:08:41,610 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:149 - Finding quote for ticker: MSFT
+2026-08-05 11:08:41,612 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:165 - Quote found for ticker: MSFT
+2026-08-05 11:08:41,614 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:08:41,618 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:08:41,623 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:08:41,625 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:08:41,628 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: INVALID
+2026-08-05 11:08:41,630 ERROR ca.jrvs.apps.stock_quote.service.QuoteService:63 - Failed to fetch or save quote for ticker: INVALID
+java.lang.IllegalArgumentException: Invalid ticker
+	at ca.jrvs.apps.stock_quote.helper.QuoteHttpHelper.fetchQuoteInfo(QuoteHttpHelper.java:46)
+	at ca.jrvs.apps.stock_quote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:45)
+	at ca.jrvs.apps.stock_quote.service.QuoteService_IntTest.fetchQuoteDataFromAPI_invalidTicker_returnsEmpty(QuoteService_IntTest.java:222)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-08-05 11:08:41,646 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:08:41,648 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:08:41,691 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,696 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,703 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:08:41,704 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:08:41,709 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:08:41,710 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:08:41,711 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:08:41,716 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:08:41,717 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:08:41,717 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 5, price: 400.0
+2026-08-05 11:08:41,717 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:08:41,719 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:148 - Position found for ticker: MSFT
+2026-08-05 11:08:41,719 INFO  ca.jrvs.apps.stock_quote.service.PositionService:81 - Existing position found for ticker: MSFT. Updating position
+2026-08-05 11:08:41,720 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:08:41,723 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:08:41,723 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:08:41,724 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,727 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,735 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,736 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,741 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: AAPL
+2026-08-05 11:08:41,742 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: AAPL
+2026-08-05 11:08:41,743 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: AAPL
+2026-08-05 11:08:41,744 WARN  ca.jrvs.apps.stock_quote.service.PositionService:161 - Sell request failed because no position exists for ticker: AAPL
+2026-08-05 11:08:41,745 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,746 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,752 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,754 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,758 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:08:41,758 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:08:41,760 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:08:41,761 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:08:41,761 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:08:41,764 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:08:41,764 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:08:41,765 INFO  ca.jrvs.apps.stock_quote.service.PositionService:128 - Retrieving portfolio
+2026-08-05 11:08:41,765 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:186 - Retrieving all positions
+2026-08-05 11:08:41,766 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:204 - Retrieved 1 positions successfully
+2026-08-05 11:08:41,767 INFO  ca.jrvs.apps.stock_quote.service.PositionService:133 - Portfolio retrieved successfully
+2026-08-05 11:08:41,767 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,771 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,777 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,778 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,783 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:08:41,784 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:08:41,785 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:08:41,785 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:08:41,786 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:08:41,789 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:08:41,790 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:08:41,790 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,793 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,800 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,801 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,804 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:08:41,805 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:08:41,806 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:08:41,806 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:08:41,807 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:08:41,810 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:08:41,811 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:08:41,811 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 11:08:41,812 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:08:41,813 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:148 - Position found for ticker: MSFT
+2026-08-05 11:08:41,829 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:243 - Deleting position for ticker: MSFT
+2026-08-05 11:08:41,832 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:258 - Position deleted successfully for ticker: MSFT
+2026-08-05 11:08:41,833 INFO  ca.jrvs.apps.stock_quote.service.PositionService:174 - Sell completed successfully for ticker: MSFT
+2026-08-05 11:08:41,833 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:08:41,834 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:08:41,835 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:08:41,835 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:08:41,904 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:08:41,904 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:08:41,911 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: BAD
+2026-08-05 11:08:41,912 ERROR ca.jrvs.apps.stock_quote.service.QuoteService:63 - Failed to fetch or save quote for ticker: BAD
+java.lang.IllegalArgumentException
+	at ca.jrvs.apps.stock_quote.helper.QuoteHttpHelper.fetchQuoteInfo(QuoteHttpHelper.java:46)
+	at ca.jrvs.apps.stock_quote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:45)
+	at ca.jrvs.apps.stock_quote.service.QuoteService_UnitTest.fetchQuoteDataFromAPI_invalidTicker(QuoteService_UnitTest.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-08-05 11:08:41,918 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:08:41,919 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:08:41,919 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:08:41,948 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 11:08:41,949 INFO  ca.jrvs.apps.stock_quote.service.PositionService:174 - Sell completed successfully for ticker: MSFT
+2026-08-05 11:08:41,953 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 11:08:41,954 WARN  ca.jrvs.apps.stock_quote.service.PositionService:161 - Sell request failed because no position exists for ticker: MSFT
+2026-08-05 11:08:41,958 WARN  ca.jrvs.apps.stock_quote.service.PositionService:38 - Buy request rejected for ticker MSFT because share count is invalid: 0
+2026-08-05 11:08:41,964 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 5, price: 100.0
+2026-08-05 11:08:41,965 INFO  ca.jrvs.apps.stock_quote.service.PositionService:81 - Existing position found for ticker: MSFT. Updating position
+2026-08-05 11:08:41,966 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:08:41,970 INFO  ca.jrvs.apps.stock_quote.service.PositionService:128 - Retrieving portfolio
+2026-08-05 11:08:41,971 INFO  ca.jrvs.apps.stock_quote.service.PositionService:133 - Portfolio retrieved successfully
+2026-08-05 11:08:41,976 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 100.0
+2026-08-05 11:08:41,976 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:08:41,977 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:15:22,051 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:15:22,063 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:15:22,071 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 11:15:22,080 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:15:22,098 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:15:22,105 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:15:22,105 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 11:15:22,109 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:15:22,110 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:15:22,111 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:149 - Finding quote for ticker: MSFT
+2026-08-05 11:15:22,122 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:165 - Quote found for ticker: MSFT
+2026-08-05 11:15:22,130 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:15:22,137 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:15:22,154 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:15:22,156 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:15:22,160 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:15:22,161 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:15:22,161 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:66 - Saving quote for ticker: MSFT
+2026-08-05 11:15:22,165 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:112 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:15:22,166 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:15:22,166 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:149 - Finding quote for ticker: MSFT
+2026-08-05 11:15:22,167 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:165 - Quote found for ticker: MSFT
+2026-08-05 11:15:22,168 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:15:22,171 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:15:22,175 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:15:22,177 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:15:22,179 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: INVALID
+2026-08-05 11:15:22,181 ERROR ca.jrvs.apps.stock_quote.service.QuoteService:63 - Failed to fetch or save quote for ticker: INVALID
+java.lang.IllegalArgumentException: Invalid ticker
+	at ca.jrvs.apps.stock_quote.helper.QuoteHttpHelper.fetchQuoteInfo(QuoteHttpHelper.java:46)
+	at ca.jrvs.apps.stock_quote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:45)
+	at ca.jrvs.apps.stock_quote.service.QuoteService_IntTest.fetchQuoteDataFromAPI_invalidTicker_returnsEmpty(QuoteService_IntTest.java:222)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-08-05 11:15:22,197 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:285 - Deleting all quotes
+2026-08-05 11:15:22,198 INFO  ca.jrvs.apps.stock_quote.dao.QuoteDao:292 - All quotes deleted successfully
+2026-08-05 11:15:22,242 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,247 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,254 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:15:22,254 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:15:22,257 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:15:22,258 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:15:22,258 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:15:22,262 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:15:22,262 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:15:22,262 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 5, price: 400.0
+2026-08-05 11:15:22,263 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:15:22,264 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:148 - Position found for ticker: MSFT
+2026-08-05 11:15:22,264 INFO  ca.jrvs.apps.stock_quote.service.PositionService:81 - Existing position found for ticker: MSFT. Updating position
+2026-08-05 11:15:22,264 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:15:22,267 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:15:22,267 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:15:22,268 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,271 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,275 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,277 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,283 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: AAPL
+2026-08-05 11:15:22,284 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: AAPL
+2026-08-05 11:15:22,285 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: AAPL
+2026-08-05 11:15:22,285 WARN  ca.jrvs.apps.stock_quote.service.PositionService:161 - Sell request failed because no position exists for ticker: AAPL
+2026-08-05 11:15:22,286 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,287 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,292 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,294 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,298 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:15:22,299 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:15:22,299 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:15:22,300 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:15:22,300 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:15:22,302 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:15:22,303 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:15:22,303 INFO  ca.jrvs.apps.stock_quote.service.PositionService:128 - Retrieving portfolio
+2026-08-05 11:15:22,303 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:186 - Retrieving all positions
+2026-08-05 11:15:22,304 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:204 - Retrieved 1 positions successfully
+2026-08-05 11:15:22,304 INFO  ca.jrvs.apps.stock_quote.service.PositionService:133 - Portfolio retrieved successfully
+2026-08-05 11:15:22,305 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,307 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,312 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,314 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,318 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:15:22,318 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:15:22,319 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:15:22,319 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:15:22,320 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:15:22,322 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:15:22,323 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:15:22,323 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,326 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,330 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,331 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,334 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 300.0
+2026-08-05 11:15:22,334 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:15:22,335 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:15:22,335 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:15:22,336 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:65 - Saving position for ticker: MSFT
+2026-08-05 11:15:22,338 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:90 - Position saved successfully for ticker: MSFT
+2026-08-05 11:15:22,338 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:15:22,338 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 11:15:22,339 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:15:22,339 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:148 - Position found for ticker: MSFT
+2026-08-05 11:15:22,349 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:243 - Deleting position for ticker: MSFT
+2026-08-05 11:15:22,351 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:258 - Position deleted successfully for ticker: MSFT
+2026-08-05 11:15:22,352 INFO  ca.jrvs.apps.stock_quote.service.PositionService:174 - Sell completed successfully for ticker: MSFT
+2026-08-05 11:15:22,352 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:130 - Finding position for ticker: MSFT
+2026-08-05 11:15:22,353 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:158 - No position found for ticker: MSFT
+2026-08-05 11:15:22,354 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:284 - Deleting all positions
+2026-08-05 11:15:22,355 INFO  ca.jrvs.apps.stock_quote.dao.PositionDao:291 - All positions deleted successfully
+2026-08-05 11:15:22,421 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:15:22,422 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:15:22,427 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: BAD
+2026-08-05 11:15:22,428 ERROR ca.jrvs.apps.stock_quote.service.QuoteService:63 - Failed to fetch or save quote for ticker: BAD
+java.lang.IllegalArgumentException
+	at ca.jrvs.apps.stock_quote.helper.QuoteHttpHelper.fetchQuoteInfo(QuoteHttpHelper.java:46)
+	at ca.jrvs.apps.stock_quote.service.QuoteService.fetchQuoteDataFromAPI(QuoteService.java:45)
+	at ca.jrvs.apps.stock_quote.service.QuoteService_UnitTest.fetchQuoteDataFromAPI_invalidTicker(QuoteService_UnitTest.java:98)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:147)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:218)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:214)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:139)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-08-05 11:15:22,432 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:40 - Fetching quote data for ticker: MSFT
+2026-08-05 11:15:22,433 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:47 - Quote data retrieved successfully for ticker: MSFT
+2026-08-05 11:15:22,433 INFO  ca.jrvs.apps.stock_quote.service.QuoteService:54 - Quote saved successfully for ticker: MSFT
+2026-08-05 11:15:22,469 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 11:15:22,469 INFO  ca.jrvs.apps.stock_quote.service.PositionService:174 - Sell completed successfully for ticker: MSFT
+2026-08-05 11:15:22,472 INFO  ca.jrvs.apps.stock_quote.service.PositionService:151 - Processing sell request for ticker: MSFT
+2026-08-05 11:15:22,472 WARN  ca.jrvs.apps.stock_quote.service.PositionService:161 - Sell request failed because no position exists for ticker: MSFT
+2026-08-05 11:15:22,475 WARN  ca.jrvs.apps.stock_quote.service.PositionService:38 - Buy request rejected for ticker MSFT because share count is invalid: 0
+2026-08-05 11:15:22,481 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 5, price: 100.0
+2026-08-05 11:15:22,482 INFO  ca.jrvs.apps.stock_quote.service.PositionService:81 - Existing position found for ticker: MSFT. Updating position
+2026-08-05 11:15:22,483 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
+2026-08-05 11:15:22,485 INFO  ca.jrvs.apps.stock_quote.service.PositionService:128 - Retrieving portfolio
+2026-08-05 11:15:22,486 INFO  ca.jrvs.apps.stock_quote.service.PositionService:133 - Portfolio retrieved successfully
+2026-08-05 11:15:22,489 INFO  ca.jrvs.apps.stock_quote.service.PositionService:62 - Processing buy request for ticker: MSFT, shares: 10, price: 100.0
+2026-08-05 11:15:22,490 INFO  ca.jrvs.apps.stock_quote.service.PositionService:98 - No existing position found for ticker: MSFT. Creating new position
+2026-08-05 11:15:22,490 INFO  ca.jrvs.apps.stock_quote.service.PositionService:118 - Buy completed successfully for ticker: MSFT
