@@ -16,23 +16,21 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.util.Properties;
 
-
 public class Main {
 
     private static final Logger logger =
             LoggerFactory.getLogger(Main.class);
 
-
     public static void main(String[] args) {
 
-        Properties properties = new Properties();
+        logger.info("Stock Quote application starting");
 
+        Properties properties = new Properties();
 
         try (InputStream input =
                      Main.class
                              .getClassLoader()
                              .getResourceAsStream("properties.txt")) {
-
 
             if (input == null) {
                 throw new RuntimeException(
@@ -40,9 +38,9 @@ public class Main {
                 );
             }
 
-
             properties.load(input);
 
+            logger.info("Application properties loaded successfully");
 
             // Database properties
             String server =
@@ -60,19 +58,15 @@ public class Main {
             String password =
                     properties.getProperty("password");
 
-
             // API key
             String apiKey =
                     properties.getProperty("api-key");
-
 
             if (apiKey == null || apiKey.isEmpty()) {
                 throw new RuntimeException(
                         "API key missing from properties.txt"
                 );
             }
-
-
 
             /*
              * Database connection
@@ -86,15 +80,10 @@ public class Main {
                             password
                     );
 
-
             try (Connection connection =
                          manager.getConnection()) {
 
-
-                logger.info(
-                        "Database connected successfully"
-                );
-
+                logger.info("Database connected successfully");
 
                 /*
                  * DAO Layer
@@ -102,11 +91,8 @@ public class Main {
                 QuoteDao quoteDao =
                         new QuoteDao(connection);
 
-
                 PositionDao positionDao =
                         new PositionDao(connection);
-
-
 
                 /*
                  * HTTP Layer
@@ -114,14 +100,11 @@ public class Main {
                 OkHttpClient httpClient =
                         new OkHttpClient();
 
-
                 QuoteHttpHelper quoteHttpHelper =
                         new QuoteHttpHelper(
                                 apiKey,
                                 httpClient
                         );
-
-
 
                 /*
                  * Service Layer
@@ -132,13 +115,10 @@ public class Main {
                                 quoteHttpHelper
                         );
 
-
                 PositionService positionService =
                         new PositionService(
                                 positionDao
                         );
-
-
 
                 /*
                  * Controller Layer
@@ -149,15 +129,16 @@ public class Main {
                                 positionService
                         );
 
+                logger.info("Application components initialized successfully");
 
                 /*
                  * Start application
                  */
                 controller.initClient();
 
+                logger.info("Stock Quote application finished");
 
             }
-
 
         } catch (Exception e) {
 
@@ -165,8 +146,7 @@ public class Main {
                     "Application failed to start",
                     e
             );
-
         }
-
     }
 }
+
