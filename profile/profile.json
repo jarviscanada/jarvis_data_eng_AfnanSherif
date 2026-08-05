@@ -25,6 +25,11 @@
       "description": "The project focused on developing an intelligent email threat detection system designed to identify phishing and malicious emails by integrating scikit-learn machine learning models. It involved collecting and preparing datasets, training and evaluating machine learning models using metrics such as accuracy, precision, recall, and F1-score, and continuously improving the models to reduce false positives. I also developed a Python-based web application, REST API, and browser extension to enable real-time email scanning and threat detection directly within the user interface. This project was especially meaningful because it combined my interests in cybersecurity, software development, and artificial intelligence to solve a real-world problem.",
       "git_url": "https://github.com/jarviscanada/jarvis_profile_builder",
       "name": "Detecting Malware Email Using Machine Learning"
+    },
+    {
+      "description": "The project focused on developing a Java-based command-line stock trading application that retrieves stock information from the Alpha Vantage API and stores quote and portfolio data in PostgreSQL using JDBC. designed the application with a layered structure consisting of controllers, services, DAOs, HTTP helpers, DTOs, and a database connection manager. The application allows users to view stock quotes, buy and sell shares, and manage their portfolio. I used Jackson for JSON-to-Java mapping, OkHttp for API requests, JUnit and Mockito for testing, and SLF4J/Log4j for logging. I also packaged the application with Maven and containerized it using Docker, running the Java application with Eclipse Temurin JDK 17 and PostgreSQL in a separate container connected through a custom Docker network. The final Docker image was published to Docker Hub. This project gave me hands-on experience building and connecting the different components of a complete Java application, from external API communication and database persistence to testing and containerization.",
+      "git_url": "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/develop/core_java/jdbc",
+      "name": "Stock Quote App"
     }
   ],
   "jarvis_projects": [
