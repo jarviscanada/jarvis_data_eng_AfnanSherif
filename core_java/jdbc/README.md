@@ -1,94 +1,54 @@
-# Introduction
+# Stock Quote App
 
-This project is a Java application that mimics the Linux `grep` command by recursively searching files and extracting lines that match a given regular expression. Two implementations were developed: `JavaGrepImp` using core Java and `JavaGrepLambdaImp` using Java Streams and lambda expressions. The project utilizes core Java concepts such as OOP, collections, file I/O, exception handling, recursion, and regular expressions. Additional tools and technologies used include Maven for dependency management, SLF4J/Log4j for logging, IntelliJ IDEA as the IDE, Git/GitHub for source control, and Docker for application distribution.
+## Introduction
 
-# Quick Start
+## Introduction
 
-## Prerequisites
+The Stock Quote App is a Java-based command-line stock trading application that allows users to retrieve stock quotes, buy and sell shares, and manage their investment portfolio. The application retrieves real-time stock information from the Alpha Vantage API and stores stock quotes, portfolio data, and transaction records in PostgreSQL through JDBC.
 
-- Java 16+
-- Maven
-- Docker
+The application was built using a layered architecture that separates responsibilities between controllers, services, DAOs, HTTP helpers, DTOs, and the database connection manager. The controller layer handles user interaction, the service layer contains the business logic, the HTTP helper manages communication with external APIs, and the DAO layer handles database operations. This design improves maintainability by keeping application components independent and easier to test.
 
-## Package the application
+Java was used as the main programming language, while Maven managed project dependencies, builds, and application packaging. OkHttp was used to send HTTP requests to the Alpha Vantage API, and Jackson was used to convert JSON API responses into Java objects through DTO classes. PostgreSQL was used as the relational database, with JDBC providing the connection between the Java application and the database and allowing SQL queries to store and retrieve data.
 
-```bash
-mvn clean package
-```
-
-## Run JavaGrepImp
-
-```bash
-java -cp target/core_java-1.0-SNAPSHOT.jar \
-ca.jrvs.apps.grep.JavaGrepImp \
-"ERROR" \
-"./logs" \
-"./matched.txt"
-```
-
-## Run JavaGrepLambdaImp
-
-```bash
-java -cp target/core_java-1.0-SNAPSHOT.jar \
-ca.jrvs.apps.grep.JavaGrepLambdaImp \
-"ERROR" \
-"./logs" \
-"./matched.txt"
-```
+JUnit and Mockito were used for unit testing by validating application logic and mocking external dependencies such as API calls. SLF4J with Log4j was implemented for logging important application events, errors, and database connection status. Docker was used to containerize both the Java application and PostgreSQL database, allowing them to run in a consistent environment connected through a custom Docker network.
 
 # Implementation
-The application follows a modular workflow design where the `process()` method acts as the high-level controller of the program. Instead of implementing all logic in a single method, the workflow is separated into smaller helper methods following clean coding principles such as DRY and KISS. The application first recursively traverses all files under the given root directory, reads each file line-by-line, checks whether each line matches the provided regular expression, stores the matching results, and finally writes them into an output file.
 
-Two implementations were developed:
+## ER Diagram
 
-- `JavaGrepImp`
-  - Uses traditional core Java programming techniques such as loops, `BufferedReader`, and manual file traversal.
+The application uses PostgreSQL to store stock market information and user portfolio data. The database contains two main tables:
 
-- `JavaGrepLambdaImp`
-  - Uses Java Streams and lambda expressions to simplify the workflow using functional-style programming.
-## Pseudocode
+- **quote**: Stores stock information retrieved from the Alpha Vantage API, including ticker symbols and market data.
+- **position**: Stores user portfolio information, including owned stocks, number of shares, and purchase details.
 
-```text
-matchedLines = []
+![ER Diagram](images/stock_quote_ER_diagram.png)
 
-for each file in listFiles(rootPath)
-    lines = readLines(file)
+## Design Patterns
 
-    for each line in lines
-        if containsPattern(line)
-            matchedLines.add(line)
+The application follows the **DAO (Data Access Object)** and **Repository** design patterns to organize database communication and improve maintainability.
 
-writeToFile(matchedLines)
-```
+The DAO layer is responsible for handling all interactions with PostgreSQL through JDBC. Classes such as `QuoteDao` and `PositionDao` contain database operations including inserting, retrieving, updating, and deleting records. These DAO classes implement a generic `CrudDao` interface, which provides a reusable structure for common database operations and reduces duplicate code across different DAO implementations. This keeps SQL queries and connection management separate from the rest of the application, allowing the service layer to focus only on business logic.
 
-## Performance Issue
+The Repository pattern is reflected through the application's approach of providing a clean interface for accessing stored data. Instead of the controller directly communicating with the database, requests flow through multiple layers. The controller handles user input, the service layer applies business rules, and the DAO layer performs database operations.
 
-The current implementation loads all matching lines and file contents into memory, which can cause high memory usage when processing large files or directories. This may eventually lead to `OutOfMemoryError`. A better approach would be processing files line-by-line using streams and writing matched lines directly to the output file instead of storing all matches in memory first.
+For example, when a user buys shares, the request is passed from the `StockQuoteController` to `PositionService`, which validates the request and determines whether an existing position should be updated or a new position should be created. The service then uses `PositionDao` to persist the data in PostgreSQL.
+
+This layered design separates responsibilities between components, making the application easier to test, maintain, and extend.
 
 # Test
 
-The application was tested manually by creating sample directories containing text files with different contents and patterns. Multiple test cases were executed using different regular expressions to verify that only matching lines were written to the output file. Edge cases such as empty files, invalid paths, nested directories, and files without matches were also tested. The output was manually compared against expected grep results to ensure correctness. Debugging was performed using IntelliJ IDEA debugger and SLF4J logging.
+The application was tested using both unit tests and integration tests. Integration tests were performed against a real PostgreSQL database running inside a Docker container.
 
-# Deployment
+The database environment was created using a PostgreSQL Docker container (`stock-postgres`) and connected to the Java application through a custom Docker network (`stock-network`). Before running tests, the r
+equired database tables were initialized and test data was inserted to ensure consistent test results.
 
-The application was dockerized for easier distribution and execution across environments. A lightweight OpenJDK base image was used to build the Docker image. The generated JAR file was copied into the container and executed using the JVM.
+The integration tests verify that JDBC operations correctly interact with the database by testing operations such as:
 
-## Build Docker Image
+- Saving and retrieving stock quotes
+- Updating portfolio positions
+- Buying and selling shares
+- Retrieving the user's portfolio
+- Handling invalid stock symbols and incorrect inputs
 
-```bash
-docker build -t grep-app .
-```
 
-## Run Docker Container
-
-```bash
-docker run grep-app "ERROR" "/data" "/output/result.txt"
-```
-
-Docker ensures consistent runtime behavior without requiring users to install Java or Maven locally.
-
-# Improvement
-
-1. Improve memory efficiency by streaming matching lines directly to the output file instead of storing all matches in memory.
-2. Add JUnit and Mockito unit tests for automated testing and improved code coverage.
-3. Enhance functionality by supporting additional grep features such as case-insensitive search, recursive depth control, and filename filtering.
+Unit tests using JUnit and Mockito were used to test service-layer logic without depending on external systems. Integration tests validated the complete workflow between the controller, service, DAO, and PostgreSQL 
