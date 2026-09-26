@@ -109,28 +109,31 @@
   ],
   "skills": {
     "competent": [
-      "HTML/CSS",
       "Docker",
-      "Trello",
+      "Linux/Bash",
+      "Database Management",
       "AWS/GCP",
-      "SQL/RDBMS",
-      "Linux/Bash"
+      "Flask",
+      "CI/CD",
+      "Testing \u0026 Debugging"
     ],
     "familiar": [
       "Java",
+      "HTML/CSS",
+      "Cloud Computing",
       "Django",
       "Flask",
-      "Database Management",
-      "CI/CD"
+      "Monitoring and Logging"
     ],
     "proficient": [
-      "C#/.NET",
       "Python",
+      "SQL/PostgreSQL",
       "Agile/Scrum",
       "AI/ML",
       "REST API",
-      "Git/GitHub"
+      "Git/GitHub",
+      "C#/.NET"
     ]
   },
-  "summary": "A passionate Software Developer with 4+ years of experience specializing in backend development. By applying strategic thinking to challenges such as reducing API response times, optimizing database queries, improving application scalability, and streamlining development workflows, I design and maintain reliable backend applications while enhancing overall system performance and efficiency. Also, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments from working in credit card sales. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go."
+  "summary": "A passionate Software Developer with 5+ years of experience specializing in backend development. By applying strategic thinking to challenges such as reducing API response times, optimizing database queries, improving application scalability, and streamlining development workflows, I design and maintain reliable backend applications while enhancing overall system performance and efficiency. Also, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments from working in credit card sales. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go."
 }

@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_AfnanSheri
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: A passionate Software Developer with 4+ years of experience specializing in backend development. By applying strategic thinking to challenges such as reducing API response times, optimizing database queries, improving application scalability, and streamlining development workflows, I design and maintain reliable backend applications while enhancing overall system performance and efficiency. Also, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments from working in credit card sales. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go.
+summary: A passionate Software Developer with 5+ years of experience specializing in backend development. By applying strategic thinking to challenges such as reducing API response times, optimizing database queries, improving application scalability, and streamlining development workflows, I design and maintain reliable backend applications while enhancing overall system performance and efficiency. Also, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments from working in credit card sales. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go.
 
 
 # Group your skills by level.
@@ -13,27 +13,30 @@ summary: A passionate Software Developer with 4+ years of experience specializin
 skills:
   # At least 5 skills
   proficient:
-    - C#/.NET
     - Python
+    - SQL/PostgreSQL
     - Agile/Scrum
     - AI/ML
     - REST API
     - Git/GitHub
+    - C#/.NET
   # At least 5 skills
   competent:
-    - HTML/CSS
     - Docker
-    - Trello
-    - AWS/GCP
-    - SQL/RDBMS
     - Linux/Bash
+    - Database Management
+    - AWS/GCP
+    - Flask
+    - CI/CD
+    - Testing & Debugging
   # At least 5 skills
   familiar:
     - Java
+    - HTML/CSS
+    - Cloud Computing
     - Django
     - Flask
-    - Database Management
-    - CI/CD
+    - Monitoring and Logging
 
 # List of Jarvis projects
 jarvis_projects:
@@ -64,7 +67,7 @@ highlighted_projects:
 
   - name: "Stock Quote App"
     git_url: "https://github.com/jarviscanada/jarvis_data_eng_AfnanSherif/tree/develop/core_java/jdbc"
-    description: "The project focused on developing a Java-based command-line stock trading application that retrieves stock information from the Alpha Vantage API and stores quote and portfolio data in PostgreSQL using JDBC. I designed the application with a layered structure consisting of controllers, services, DAOs, HTTP helpers, DTOs, and a database connection manager. The application allows users to view stock quotes, buy and sell shares, and manage their portfolio. I used Jackson for JSON-to-Java mapping, OkHttp for API requests, JUnit and Mockito for testing, and SLF4J/Log4j for logging. I also packaged the application with Maven and containerized it using Docker, running the Java application with Eclipse Temurin JDK 17 and PostgreSQL in a separate container connected through a custom Docker network. The final Docker image was published to Docker Hub. This project gave me hands-on experience building and connecting the different components of a complete Java application, from external API communication and database persistence to testing and containerization." 
+    description: "The project focused on developing a Java-based command-line stock trading application that retrieves stock information from the Alpha Vantage API and stores quote and portfolio data in PostgreSQL using JDBC. I designed the application with a layered structure consisting of controllers, services, DAOs, HTTP helpers, DTOs, and a database connection manager. The application allows users to view stock quotes, buy and sell shares, and manage their portfolio. I used Jackson for JSON-to-Java mapping, OkHttp for API requests, JUnit and Mockito for testing, and SLF4J/Log4j for logging. I also packaged the application with Maven and containerized it using Docker, running the Java application with Eclipse Temurin JDK 17 and PostgreSQL in a separate container connected through a custom Docker network. The final Docker image was published to Docker Hub. This project gave me hands-on experience building and connecting the different components of a complete Java application, from external API communication and database persistence to testing and containerization."
 
 #List of professional experience
 #The job description allows hiring managers to understand your job and the technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
@@ -103,19 +106,19 @@ professional_experience:
     description: "Developed RESTful APIs and backend solutions for digital business applications using Python and Flask, optimized PostgreSQL queries to improve response times, and collaborated with cross-functional teams to deliver efficient backend services."
 
 #List of edcuation
-education: 
+education:
   - school_name: "Seneca Polytechnic College"
     duration: "2025-2026"
     degree: "Cybersecurity and Threat Management Certification"
     department: "Computer Science"
     # optional
-    awards_achievements: 
+    awards_achievements:
       - "GPA: 3.7/4.0"
   - school_name: "Istanbul Kultur University"
     duration: "2019-2022"
     degree: "Computer Engineering"
     department: "Electrical and Computer Engineering"
-    awards_achievements: 
+    awards_achievements:
      - "GPA: 3.3/4.0"
 
 #Optional section
@@ -133,4 +136,3 @@ others:
       - "I like to learn a new skill every 3-6 months."
       - "Some of my hobbies are crocheting, gardening, cooking Italian cusine, and DIY crafts."
       - "I am allergic to cats, but I love them, especially my cat Nemo."
-
