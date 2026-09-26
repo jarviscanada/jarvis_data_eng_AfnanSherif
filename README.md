@@ -1,14 +1,14 @@
 # Afnan Sherif . Jarvis Consulting
 
-A passionate Software Developer with 4+ years of experience specializing in backend development. By applying strategic thinking to challenges such as reducing API response times, optimizing database queries, improving application scalability, and streamlining development workflows, I design and maintain reliable backend applications while enhancing overall system performance and efficiency. Also, I developed strong communication skills, relationship-building abilities, and the confidence to work directly with clients in fast-paced environments from working in credit card sales. Combining technical expertise with strong interpersonal skills, I have the adaptability to excel in different roles, contribute to team success, and continue growing wherever I go.
+Software Developer with 5+ years of experience building backend applications, REST APIs, and AI/ML solutions using Python, SQL, PostgreSQL, Docker, and Linux. Experienced in developing and supporting production software, optimizing database performance, troubleshooting backend issues, and integrating machine learning into practical applications. Developed an AI-based phishing and malware detection system, combining machine learning, API development, and cybersecurity to address a real-world problem. Currently expanding my knowledge of cloud security and AI engineering through hands-on projects and AWS Cloud Security Foundations training. I enjoy learning new technologies, solving complex problems, and building reliable, secure software that creates practical value.
 
 ## Skills
 
-**Proficient:** C#/.NET, Python, Agile/Scrum, AI/ML, REST API, Git/GitHub
+**Proficient:** Python, SQL/PostgreSQL, Agile/Scrum, AI/ML, REST API, Git/GitHub, C#/.NET
 
-**Competent:** HTML/CSS, Docker, Trello, AWS/GCP, SQL/RDBMS, Linux/Bash
+**Competent:** Docker, Linux/Bash, Database Management, AWS/GCP, Flask, CI/CD, Testing & Debugging
 
-**Familiar:** Java, Django, Flask, Database Management, CI/CD
+**Familiar:** Java, HTML/CSS, Cloud Computing, Django, Flask, Monitoring and Logging
 
 ## Jarvis Projects
 
@@ -52,6 +52,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_AfnanSheri
 
 
 ## Miscellaneous
+- AWS Cloud Security Foundations - Trained
 - Microsoft Azure AI Fundamentals (2025)
 - Certificate of Participation - Human-Computer Interaction, Optimization, and Robotic Applications (HORA) 2022 (supported by IEEE). Presented and published paper Detecting Phishing Websites using Machine Learning: https://ieeexplore.ieee.org/abstract/document/9799917
 - I use photography to capture meaningful moments and savor them forever.
