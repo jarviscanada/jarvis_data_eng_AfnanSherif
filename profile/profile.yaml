@@ -60,7 +60,10 @@ The project was implemented in Python using a Jupyter Notebook environment. Pand
 # Feel free to add more projects
 highlighted_projects:
     #project name
-  - name: "Detecting Malware Email Using Machine Learning"
+  - name: "IoT Monitoring & Threat Detection | Raspberry Pi, AWS IoT, EC2, Suricata, ELK"
+    git_url: "https://github.com/"
+    description: "Built an end-to-end IoT monitoring system. Used a Raspberry Pi with an MCP9808 temperature sensor and connected it securely to AWS IoT Core using device certificates and MQTT over TLS. I also deployed an EC2 instance running Mosquitto, Suricata, Filebeat, Elasticsearch and Kibana for security monitoring. VPC Flow Logs were stored in S3, which allowed me to investigate network traffic and identify high-volume MQTT activity. We also had to troubleshoot resource limitations on the EC2 instance and tune the Elasticsearch heap because I was running several services on a relatively small instance."
+  - name: "Detecting Malware using Machine Learning"
     #URL is optional
     git_url: "https://github.com/jarviscanada/jarvis_profile_builder"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
