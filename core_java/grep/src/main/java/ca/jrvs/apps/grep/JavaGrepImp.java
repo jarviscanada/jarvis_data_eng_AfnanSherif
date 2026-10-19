@@ -91,14 +91,7 @@ public class JavaGrepImp implements JavaGrep{
   }
   @Override
   public void writeToFile(List<String> lines) throws IOException {
-    try (FileOutputStream output = new FileOutputStream(outFile)) {
-      for (String line : lines) {
-        Files.write(
-            Paths.get(outFile),
-            lines
-        );      
-      }    
-    }
+    Files.write(Paths.get(outFile), lines);
   }
   @Override
   public String getRootPath() {
