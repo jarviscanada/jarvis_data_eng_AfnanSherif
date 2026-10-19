@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.regex.Pattern;
+import java.util.stream.Stream;
 
 public class JavaGrepImp implements JavaGrep{
   final Logger logger = LoggerFactory.getLogger(JavaGrep.class);
@@ -57,18 +58,20 @@ public class JavaGrepImp implements JavaGrep{
     writeToFile(matchedLines);
   }
 
+
   @Override
   public List<File> listFiles(String rootDir) {
-    try {
-      return Files.walk(Paths.get(rootDir))
-        .filter(Files::isRegularFile)
-        .map(Path::toFile)
-        .collect(Collectors.toList());
+    try (Stream<Path> paths = Files.walk(Paths.get(rootDir))) {
+      return paths
+              .filter(Files::isRegularFile)
+              .map(Path::toFile)
+              .collect(Collectors.toList());
     } catch (IOException e) {
       throw new RuntimeException(
-        "Failed to read files from directory: " + rootDir, e);
+              "Failed to read files from directory: " + rootDir, e);
     }
   }
+
 
   @Override
   public List<String> readLines(File inputFile) {
@@ -84,10 +87,9 @@ public class JavaGrepImp implements JavaGrep{
     }
     return lines;
   }
-
   @Override
   public boolean containsPattern(String line) {
-    return pattern.matcher(line).find();
+    return line != null && pattern.matcher(line).find();
   }
   @Override
   public void writeToFile(List<String> lines) throws IOException {
