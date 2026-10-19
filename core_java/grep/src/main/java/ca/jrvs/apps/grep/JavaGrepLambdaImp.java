@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.io.UncheckedIOException;
 
 import org.apache.log4j.BasicConfigurator;
 import org.slf4j.Logger;
@@ -48,17 +49,22 @@ public class JavaGrepLambdaImp implements JavaGrepLambda {
 
   @Override
   public void process() throws IOException {
-    List<String> matchedLines;
+    try {
+      List<String> matchedLines;
 
-    try (Stream<Path> paths = listFiles(rootPath)) {
-      matchedLines = paths
-              .map(Path::toFile)
-              .flatMap(this::readLines)
-              .filter(this::containsPattern)
-              .collect(Collectors.toList());
+      try (Stream<Path> paths = listFiles(rootPath)) {
+        matchedLines = paths
+                .map(Path::toFile)
+                .flatMap(this::readLines)
+                .filter(this::containsPattern)
+                .collect(Collectors.toList());
+      }
+
+      writeToFile(matchedLines);
+    } catch (UncheckedIOException e) {
+      logger.error("Failed to read files while processing: " + rootPath, e);
+      throw new IOException("Failed to process files in: " + rootPath, e);
     }
-
-    writeToFile(matchedLines);
   }
 
   @Override
